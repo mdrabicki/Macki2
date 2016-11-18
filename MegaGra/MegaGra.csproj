@@ -52,10 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="IDamageDealer.cs" />
-=======
->>>>>>> d2670a283b060449c70bd64f17e6adfcbdb2744b
     <Compile Include="IDamageReceiver.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="Player.cs" />
@@ -86,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\skeleton.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,6 +9,7 @@ namespace MegaGra
 {
     class Player : IDamageReceiver
     {
+        
         public String name  { get; set; }
         public int healthPoints { get; set; }
         public int attackDamage { get; set; }
