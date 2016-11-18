@@ -19,7 +19,7 @@ namespace MegaGra
             this.healthPoints -= (dmg - this.defense) ;
         }
         public ProgressBar healthBar { get; set; }
-        public PictureBox monsterimage { get; set; }
+        public PictureBox playerImage;
         public Player(Form form, int healthPoints = 100, int attack = 10, int def = 1, int level = 1, int exp = 50)
         {
             this.healthPoints = healthPoints;
@@ -33,6 +33,21 @@ namespace MegaGra
             this.healthBar.Maximum = healthPoints;
             this.healthBar.Value = 70;
 
+            playerImage=createImage(form);
+            
+            playerImage.Show();
+
+        }
+        PictureBox createImage(Form form)
+        {
+            PictureBox playerImage = new PictureBox();
+            playerImage.Parent = form;
+            playerImage.ImageLocation = @"C:\Users\macie\Desktop\śmietnik\DSC_0002.jpg";
+            float scale = 1 / 100;
+            playerImage.Height = 100;
+            playerImage.Width = 100;
+            playerImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            return playerImage;
         }
 
     }
