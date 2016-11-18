@@ -16,5 +16,10 @@ namespace MegaGra
         {
             InitializeComponent();
         }
+
+        private void addMonsterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Skeleton Skeleton = new Skeleton(this);
+        }
     }
 }

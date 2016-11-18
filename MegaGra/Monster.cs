@@ -9,13 +9,14 @@ namespace MegaGra
 {
     class Monster
     {
-        int healthPoints;
-        int attack;
-        int def;
-        int level;
-        int exp;
-        ProgressBar healthBar;
-        PictureBox monsterimage;
+        public int healthPoints { get; set; }
+        public int attack { get; set; }
+        public int def { get; set; }
+        public int level { get; set; }
+        public int exp { get; set; }
+        public ProgressBar healthBar { get; set; }
+        public PictureBox monsterimage { get; set; }
+        
 
         
         
