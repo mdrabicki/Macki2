@@ -26,7 +26,7 @@ namespace MegaGra
             this.healthPoints = healthPoints;
             this.attackDamage = attack;
 
-
+            
             this.healthBar = new ProgressBar();
             this.healthBar.Parent = form;
             this.healthBar.Location = new System.Drawing.Point(10, 40);
@@ -35,7 +35,9 @@ namespace MegaGra
             this.healthBar.Value = 70;
 
             playerImage=createImage(form);
+            playerImage.MouseClick += new MouseEventHandler(imageClickHandler);
             
+
             playerImage.Show();
 
         }
@@ -44,12 +46,17 @@ namespace MegaGra
             PictureBox playerImage = new PictureBox();
             playerImage.Parent = form;
             playerImage.ImageLocation = @"C:\Users\macie\Desktop\śmietnik\DSC_0002.jpg";
-            float scale = 1 / 100;
             playerImage.Height = 100;
             playerImage.Width = 100;
             playerImage.SizeMode = PictureBoxSizeMode.StretchImage;
             return playerImage;
+            
+        }
+        void imageClickHandler(object sender, EventArgs e)
+        {
+            
         }
 
     }
+    
 }
