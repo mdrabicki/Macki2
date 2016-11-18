@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MegaGra
 {
     public interface IDamageReceiver 
-    {
+    {    
         void takeDamage(int dmg);
     }
 }
