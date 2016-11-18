@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MegaGra
 {
-    public interface IDamageReceiver 
+    class Player : IDamageReceiver
     {
-        void takeDamage(int dmg);
+        void IDamageReceiver.takeDamage(int dmg)
+        {
+
+        }
     }
 }
