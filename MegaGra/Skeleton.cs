@@ -9,8 +9,21 @@ namespace MegaGra
 {
     class Skeleton : Monster
     {
-       
-       
+
+        void monsterImageShow(Form form)
+        {
+            
+            PictureBox img = new PictureBox();
+            img.Parent = form;
+            img.Location = new System.Drawing.Point(10, 50);
+            img.Width = 100;
+            img.Height = 100;
+            img.SizeMode = PictureBoxSizeMode.StretchImage;
+            img.ImageLocation = @"C:\Projekty\c#\Macki2\MegaGra\resources\skeleton.jpg";
+            img.Show();
+            img.Click += new EventHandler(img_Click);
+        }
+
 
         public Skeleton (Form form, int healthPoints = 100, int attack = 10, int defense = 1, int level = 1, int exp = 50)
         {
@@ -27,20 +40,13 @@ namespace MegaGra
             this.healthBar.Maximum = healthPoints;
             this.healthBar.Value = healthPoints;
 
-            PictureBox img = new PictureBox();
-            img.Parent = form;            
-            img.Location = new System.Drawing.Point(10, 50);
-            img.Width = 100;
-            img.Height = 100;
-            img.SizeMode = PictureBoxSizeMode.StretchImage;
-            img.ImageLocation = @"C:\Projekty\c#\Macki2\MegaGra\resources\skeleton.jpg";
-            img.Show();
-
-
-
-
-
-
+            monsterImageShow(form);       
+            
+        }
+       void img_Click(object sender, EventArgs e)
+        {
+            
+            
         }
 
     }
