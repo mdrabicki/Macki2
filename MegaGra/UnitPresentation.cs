@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.Drawing;
-using System.IO;
-using System.Reflection;
-using System.Windows.Input;
 
 namespace MegaGra
 {
@@ -19,21 +11,19 @@ namespace MegaGra
     };
     class UnitPresentation
     {
- 
+
+
         public Point possition { get; set; }
-         
         public ProgressBar healthBar { get; set; }
         public PictureBox unitImage { get; set; }
+
         public UnitPresentation(Point possition,UnitType unitType, Form form)
         {
             this.possition = possition;
             createHealthBar(form);
-            createUnitImage(form, unitType); 
-
-          
-            
-            
+            createUnitImage(form, unitType);     
         }
+
         private void createHealthBar(Form form)
         {
             healthBar = new ProgressBar();

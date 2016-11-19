@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace MegaGra
 {
@@ -17,19 +14,14 @@ namespace MegaGra
         {
             this.healthPoints -= (dmg - this.defense) ;
         }
-        public Player(Form form)
+        public Player(Form form, Point point)
         {
             healthPoints = 100;
             attackDamage = 10;
             defense = 1;
-            unitPresentation = new UnitPresentation(new System.Drawing.Point(20, 20), UnitType.PLAYER, form);
-     
-          
-            
-
- 
-
+            unitPresentation = new UnitPresentation(point, UnitType.PLAYER, form);
         }
+
         void imageClickHandler(object sender, EventArgs e)
         {
             IDamageDealer me = (IDamageDealer)this;
