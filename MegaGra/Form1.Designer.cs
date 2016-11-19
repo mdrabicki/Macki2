@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addMonsterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPlayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // gameToolStripMenuItem
             // 
             this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addMonsterToolStripMenuItem});
+            this.addMonsterToolStripMenuItem,
+            this.addPlayerToolStripMenuItem});
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
             this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.gameToolStripMenuItem.Text = "Game";
@@ -55,9 +57,16 @@
             // addMonsterToolStripMenuItem
             // 
             this.addMonsterToolStripMenuItem.Name = "addMonsterToolStripMenuItem";
-            this.addMonsterToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.addMonsterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addMonsterToolStripMenuItem.Text = "Add Monster";
             this.addMonsterToolStripMenuItem.Click += new System.EventHandler(this.addMonsterToolStripMenuItem_Click);
+            // 
+            // addPlayerToolStripMenuItem
+            // 
+            this.addPlayerToolStripMenuItem.Name = "addPlayerToolStripMenuItem";
+            this.addPlayerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addPlayerToolStripMenuItem.Text = "Add Player";
+            this.addPlayerToolStripMenuItem.Click += new System.EventHandler(this.addPlayerToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -80,6 +89,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addMonsterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addPlayerToolStripMenuItem;
     }
 }
 

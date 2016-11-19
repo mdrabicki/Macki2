@@ -15,11 +15,17 @@ namespace MegaGra
         public Form1()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
         private void addMonsterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Skeleton Skeleton = new Skeleton(this);
+            Skeleton skeleton = new Skeleton(this);
+        }
+
+        private void addPlayerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Player player = new Player(this);
         }
     }
 }
