@@ -10,15 +10,10 @@ using System.Windows.Forms;
 
 namespace MegaGra
 {
-    enum ActiveUIComponent
-    {
-        NONE,
-        ADD_PLAYER,
-        ADD_MONSTER
-    }
+  
     public partial class Form1 : Form
     {
-        ActiveUIComponent activeUIComponent=ActiveUIComponent.NONE;
+        
         public Form1()
         {
              
@@ -30,7 +25,7 @@ namespace MegaGra
 
         private void addMonsterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            activeUIComponent = ActiveUIComponent.ADD_MONSTER;
+            GameController.activeUIComponent = ActiveUIComponent.ADD_MONSTER;
             
            
             
@@ -38,7 +33,7 @@ namespace MegaGra
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            switch (activeUIComponent) { 
+            switch (GameController.activeUIComponent) { 
             case ActiveUIComponent.ADD_MONSTER:
                 Skeleton skeleton = new Skeleton(this, MousePosition);
                 break;
@@ -47,12 +42,12 @@ namespace MegaGra
                 break;
                     
         }
-            activeUIComponent = ActiveUIComponent.NONE;
+            GameController.activeUIComponent = ActiveUIComponent.NONE;
         }
 
         private void addPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            activeUIComponent = ActiveUIComponent.ADD_PLAYER;
+            GameController.activeUIComponent = ActiveUIComponent.ADD_PLAYER;
         }
 
        

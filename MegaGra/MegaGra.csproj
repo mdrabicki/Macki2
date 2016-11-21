@@ -53,6 +53,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameController.cs" />
     <Compile Include="IDamageDealer.cs" />
     <Compile Include="IDamageReceiver.cs" />
     <Compile Include="Monster.cs" />
